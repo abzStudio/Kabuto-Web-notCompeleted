@@ -18,10 +18,30 @@ div, h1 {
     font-family: Zaychik;
   }
   .section_story{
-    background-image: url("images/story_bg.png");
-background-repeat: no-repeat;
-background-size: cover;
-background-position: center;
+background-color: #f3d9b5;
+  }
+  .text_rnd{
+    font-weight: 400;
+    font-size: 128px;
+    text-align: left;
+    transform: rotate(327deg);
+    -webkit-transform: rotate(327deg);
+    -moz-transform: rotate(327deg);
+    -ms-transform: rotate(327deg);
+    -o-transform: rotate(327deg);
+    position: relative;
+    bottom: 33vh;
+    left: -20vh;
+
+  }
+  .text_p{
+    font-weight: 400;
+font-size: 20px;
+line-height: 22px;
+text-align: right;
+letter-spacing: 0.165em;
+margin-right: 9%;
+color: #000000;
   }
 .color-a{
     color: white;
@@ -48,6 +68,12 @@ background-position: center;
   .active.fade-right {
     animation: fade-right 1s ease-in;
   }
+  .end_col{
+    display: flex;
+    align-items: end;
+    justify-content: center;
+  }
+  
   @keyframes fade-bottom {
     0% {
       transform: translateY(50px);
@@ -101,19 +127,36 @@ background-repeat: no-repeat;
     
 }
 .story_col h1{
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin-bottom: 33%;
     font-weight: 400;
 font-size: 128px;
+}
+.tree_c{
+  position: relative;
+  z-index: 99;
+}
+.adj_row{
+  margin-top: -11% !important;
+}
+.iamge_ad{
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 .hero_col{
     text-align: center;
     position: absolute;
     bottom: 15vh;
 }
+.div_texts p{
+  text-align: left !important;
+}
+.story_two{
+  width: 435px;
+
+}
 .row_story_end{
-    display: flex;
-    align-items: flex-end;
+    /* display: flex;
+    align-items: flex-end; */
 }
 img{
     width: 100%;
