@@ -125,6 +125,13 @@ jQuery('.wrapper ul li a').on('click', function(){
     jQuery(".wrapper").hide();
   //  $("aside").removeClass("open");
 });
-
+$('.js-anchor-link').click(function(e){
+  e.preventDefault();
+  var target = $($(this).attr('href'));
+  if(target.length){
+    var scrollTo = target.offset().top;
+    $('body, html').animate({scrollTop: scrollTo+'px'}, 1000);
+  }
+});
 </script>
 </html>
