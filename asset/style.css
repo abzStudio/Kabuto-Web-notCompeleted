@@ -7,6 +7,45 @@
 html {
   scroll-behavior: smooth;
 }
+/* animation left to right */
+#slidess {
+  position: relative;
+  left: 32vh;
+  top:-62vh;
+  width: 1000px;
+  height: 500px;
+  transition: 1s;
+  border: 3px soild red;
+}
+.sword_back{
+  height: 400px;
+  object-fit: fill;
+}
+.sword_cover{
+  height: 400px;
+  object-fit: fill;
+  width: 1400px;
+}
+.wrapperss:hover #slidess {
+  transition: 2s;
+  left: 200vh; /* SET THE SLIDER TO BE 0 */
+
+}
+@keyframes slideInUp {
+  from {
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInUp {
+  animation-name: slideInUp;
+}
+/* animation left to right */
 /* Navbar start */
 .fade-lefts {
   animation: fade-left ease 10s;
