@@ -10,21 +10,21 @@ html {
 /* animation left to right */
 #slidess {
   position: relative;
-  left: 32vh;
-  top:-62vh;
+  left: 30vh;
+  top: -90vh;
   width: 1000px;
   height: 500px;
   transition: 1s;
   border: 3px soild red;
 }
 .sword_back{
-  height: 400px;
+  height: 850px;
   object-fit: fill;
 }
 .sword_cover{
-  height: 400px;
+  height: 550px;
   object-fit: fill;
-  width: 1400px;
+  width: 1270px;
 }
 .wrapperss:hover #slidess {
   transition: 2s;
@@ -78,11 +78,32 @@ html {
   0% {opacity:0;}
   100% {opacity:1;}
 }
+
+
+
 .menu-btn{
   background-image: url("images/menuicon.png") !important; 
 }
-#active:checked ~ .menu-btn{
-  background-image: url("images/menuiconclose.png") !important; 
+.section_footer{
+  background-image: url("images/footerbg.png"); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  padding-top: 27vh !important;
+}
+.menu-btn{
+  position: absolute;
+  z-index: 2;
+  right: 20px;
+  /* left: 20px; */
+  top: 20px;
+  height: 110px;
+  width: 65px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  background: transparent;
+  border: none;
 }
 
 .menu_img{
@@ -91,70 +112,134 @@ html {
   right: -42vh;
     top: 32vh;
 }
-.wrapper{
+@media screen and (min-width: 300px) {
+
+aside {
   position: fixed;
+  width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-  background: transparent;
-  clip-path: circle(25px at calc(100% - 45px) 45px);
-  transition: all 0.3s ease-in-out;
-}
-
-#active:checked ~ .wrapper, .menu_img{
-  clip-path: circle(75%);
   background: #BA2F2F !important;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+.open {
+  opacity: 1;
+  visibility: visible;
+}
+nav {
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+nav ul, .section_footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: Zaychik;
+}
+.fend{
+  display: flex;
+    align-items: end;
+    justify-content: end;
+}
+nav ul li {
+  align-items: center;
+  flex: 1;
+  line-height: 20vh;
+}
+nav ul li a, .js-anchor-link {
+  font-size: 1.5em;
+  transition: all 0.5s ease;
+  display: block;
+  text-decoration: none;
+  color: rgba(255, 255, 255, .5);
+}
+.js-anchor-link{
+color: white !important;
+}
+.js-anchor-link:hover{
+  color: rgba(255, 255, 255, .5) !important;
+}
+nav ul li a:hover, .js-anchor-link:hover {
+  color: rgba(255, 255, 255, .9);
+  transform: scale(1.1);
+}
+nav ul li a:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+nav ul li a:before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  bottom: 0;
+  left: 25%;
+  background: white;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
 }
 
-.menu-btn{
-  position: absolute;
-  z-index: 2;
-  right: 20px;
-  /* left: 20px; */
-  top: 20px;
-  height: 103px;
-  width: 127px;
-  background-repeat: no-repeat;
+@media screen and (min-width: 600px) {
+  nav ul li a, .js-anchor-link {
+    font-size: 3em;
+ }
+
+.close {
+  position: relative;
+  top: 16px;
+  right: -90px;
+  z-index: 3;
   cursor: pointer;
+}
+.close span, .close span:before, .close span:after {
+  border-radius: 4px;
+  height: 100px;
+  width: 115px;
+  background: #ba2f2f;
+  position: absolute;
+  display: block;
+  content: '';
+  background-image: url("images/menuiconclose.png") !important; 
+}
+
+.outer-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 85px;
+  height: 85px;
+  cursor: pointer;
+}
+}
+.close span, .close span:before, .close span:after {
+  background-image: url("images/menuiconclose.png") !important; 
+  height: 100px;
+  width: 115px;
+  position: absolute;
+  display: block;
+  right: 20px;
+}
+.outer-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 85px;
+  height: 85px;
+  cursor: pointer;
+}
+nav{
+  background: #BA2F2F !important;
   transition: all 0.3s ease-in-out;
 }
-#active:checked ~ .menu-btn{
-  color: #fff;
-}
-
-.wrapper ul{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  list-style: none;
-  text-align: center;
-}
-.wrapper ul li{
-  margin: 15px 0;
-}
-.wrapper ul li a{
-  color: none;
-  text-decoration: none;
-  font-size: 60px;
-  padding: 5px 30px;
-  color: #fff;
-  line-height: 50px;
-  transition: all 0.3s ease;
-}
-
-.wrapper ul li a:hover:after{
-  transform: scaleY(1);
-}
-.wrapper ul li a:hover{
-  color: rgb(228, 226, 226);
-}
-input[type="checkbox"]{
-  display: none;
-}
-
 @keyframes rotate {
   0%{
     filter: hue-rotate(0deg);
@@ -163,7 +248,6 @@ input[type="checkbox"]{
     filter: hue-rotate(360deg);
   }
 }
-
 
 /* Navbar End */
 .hero-section{
@@ -328,10 +412,7 @@ margin-left: 3%;
 width: 435px;
 max-width: 100%;
 }
-.row_story_end{
-  /* display: flex;
-  align-items: flex-end; */
-}
+
 img{
   width: 100%;
 }
@@ -345,6 +426,7 @@ font-size: 60px !important;
   display: block;
   margin-right: 0;
 }
+
 @media screen and (min-width: 1025px) and (max-width:1550px) {
 .last_set {
   bottom: 0vh !important;
@@ -361,8 +443,23 @@ margin-top: 20px;
 br{
 display: none;
 }
+
 }
 @media screen and (min-width: 769px) and (max-width:990px) {
+  .social_icons {
+    text-align: center !important;
+    top: 8vh;
+    right: 0 !important;
+  }
+ 
+  /* body, html{
+    overflow: hidden;
+  } */
+  .fend{
+    display: block !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
 .last_set {
   bottom: 0vh !important;
 }
@@ -409,11 +506,6 @@ margin-bottom: -4%;
 .menu-btn:checked{
   background: transparent !important;
 }
-.wrapper ul li a{
-  font-size: 45px;
-  padding: 5px 9px;
-  line-height: 90px;
-}
 .container_stry{
   margin-top: -12vh;
 }
@@ -424,4 +516,62 @@ margin-bottom: -4%;
 .image_star{
   margin-top: -3vh;
 }
+.sword_cover{
+  width: 100%;
+  display: none;
+}
+#pot{
+  display: none;
+}
+nav ul li a{
+  font-size: 36px;
+ line-height: 80px;
+}
+nav{
+  height: 55vh;
+}
+.menu-btn{
+  width: 60px;
+}
+.social_icons {
+  text-align: center !important;
+  top: 8vh;
+  right: 0 !important;
+}
+.iconmob{
+  top: 0 !important;
+}
+/* body, html{
+  overflow: hidden;
+} */
+.fend{
+  display: block !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.iconset{
+  width: 23px !important;
+  height: 23px !important;
+  margin-top: 20px !important;
+}
+}
+.iconset{
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
+  object-fit: contain;
+}
+.icons_ul{
+  display: inline-flex;
+  list-style: none;
+}
+.social_icons{
+  position: relative;
+  text-align: right;
+  right: 35vh;
+}
+.iconmob{
+  top: 0 !important;
+  text-align: center !important;
+  right: 0 !important;
 }
