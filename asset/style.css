@@ -24,12 +24,11 @@ html {
 .sword_cover{
   height: 550px;
   object-fit: fill;
-  width: 1270px;
+  width: 1400px;
 }
 .wrapperss:hover #slidess {
   transition: 2s;
   left: 200vh; /* SET THE SLIDER TO BE 0 */
-
 }
 @keyframes slideInUp {
   from {
@@ -126,6 +125,10 @@ aside {
   transition: all 0.5s ease;
   z-index: 2;
 }
+.pointshead{
+  text-align: left;
+  padding: 0 10%;
+}
 .open {
   opacity: 1;
   visibility: visible;
@@ -168,7 +171,7 @@ color: white !important;
 }
 nav ul li a:hover, .js-anchor-link:hover {
   color: rgba(255, 255, 255, .9);
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
 }
 nav ul li a:hover:before {
   visibility: visible;
@@ -470,6 +473,12 @@ br{
 display: none;
 }
 }
+.sword_mob{
+  display: none;
+}
+body, html{
+  overflow-x: hidden;
+}
 @media screen and (max-width: 768px) {
   .btn_custom{
       width: 280px;
@@ -484,6 +493,34 @@ display: none;
   .last_set {
     bottom: 0vh !important;
 }
+aside {
+}
+body, html{
+  overflow-x: hidden;
+}
+.sword_cover{
+  /* -ms-transform: rotate(90deg); /* IE 9 */
+  /* transform: rotate(90deg); */
+}
+.sword_back{
+  height: 800px;
+  width: 100%;
+}
+.sword_cover{
+  height: 700px;
+    width: 34%;
+}
+#slidess{
+  left: 5vh;
+  top: -64vh;
+}
+.sword_mob{
+  display: block;
+}
+.swordhide{
+  display: none;
+}
+
 .teamhead h1{
   margin-top: 5%;
   }
@@ -516,10 +553,7 @@ margin-bottom: -4%;
 .image_star{
   margin-top: -3vh;
 }
-.sword_cover{
-  width: 100%;
-  display: none;
-}
+
 #pot{
   display: none;
 }
@@ -574,4 +608,69 @@ nav{
   top: 0 !important;
   text-align: center !important;
   right: 0 !important;
+}
+@media 
+  (max-device-width: 414px)
+  and (max-device-height: 736px) { 
+    .sword_back{
+  height: 855px;
+    width: 385px  
+}
+.sword_cover {
+    height: 600px;
+    width: 345px;
+}
+#slidess {
+    left: 4vh;
+    top: -68vh;
+}
+}
+@media 
+  (max-device-width: 390px)
+  and (max-device-height: 844px) { 
+    .sword_back{
+  height: 855px;
+    width: 385px  
+}
+.sword_cover {
+    height: 570px;
+    width: 345px;
+}
+#slidess {
+    left: 4vh;
+    top: -58vh;
+}
+}
+@media 
+  (max-device-width: 375px)
+  and (max-device-height: 812px) { 
+    .sword_back{
+  height: 855px;
+    width: 385px  
+}
+.sword_cover {
+    height: 570px;
+    width: 345px;
+}
+#slidess {
+  left: 4vh;
+    top: -62vh;
+}
+}
+
+@media 
+  (max-device-width: 375px)
+  and (max-device-height: 667px) { 
+    .sword_back{
+  height: 855px;
+    width: 385px  
+}
+.sword_cover {
+    height: 570px;
+    width: 345px;
+}
+#slidess {
+    left: 5vh;
+    top: -74vh;
+}
 }
