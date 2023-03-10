@@ -7,6 +7,9 @@
 html {
   scroll-behavior: smooth;
 }
+body{
+  background-color: #f3d9b5 !important;
+}
 /* animation left to right */
 #slidess {
   width: 1000px;
@@ -497,13 +500,61 @@ body, html{
   overflow-x: hidden;
 }
 @media 
+  (max-device-width: 2560px)
+  and (max-device-height: 1440px) { 
+  #slidess{
+    margin-top: -46%;
+    margin-left: 36%;
+  }
+}
+@media 
+  (max-device-width: 1920px)
+  and (max-device-height: 1080px) { 
+  #slidess{
+    margin-top: -62%;
+    margin-left: 32%;
+  }
+}
+@media 
+(max-device-width: 1600px)
+and (max-device-height: 900px) { 
+#slidess{
+  margin-top: -75%;
+  margin-left: 29%;
+}
+}
+@media 
+  (max-device-width: 1536px)
+  and (max-device-height: 864px) { 
+  #slidess{
+    margin-top: -78%;
+    margin-left: 28%;
+  }
+}
+@media 
   (max-device-width: 1440px)
   and (max-device-height: 900px) { 
     #slidess{
       margin-top: -81%;
     margin-left: 26%;
     }
-}
+  }
+  @media 
+  (max-device-width: 1280px)
+  and (max-device-height: 1024px) { 
+    #slidess{
+      margin-top: -94%;
+      margin-left: 23%;
+    }
+  }
+  @media 
+  (max-device-width: 1280px)
+  and (max-device-height: 800px) { 
+    #slidess{
+      margin-top: -94%;
+      margin-left: 23%;
+    }
+  }
 @media 
   (max-device-width: 1024px)
   and (max-device-height: 1366px) { 
@@ -541,13 +592,13 @@ body, html{
   (max-device-width: 768px)
   and (max-device-height: 1024px) 
   { 
-    /* #slidess{  margin-left: -3% !important;
+    #slidess{  
+      margin-left: 3% !important;
     margin-top: -50% !important;
     }
-    .sword_back, .sword_cover{
-margin: 0 auto;
-  
-} */
+    .sword_mobn {
+      margin-left: 26% !important;
+  }
   }
 @media screen and (max-width: 768px) {
   .teamhead h1{
@@ -575,8 +626,8 @@ body, html{
 #slidess{
   width: 100%;
   height: 100%;
-  margin-left: 6%;
-  margin-top: -94%;
+  margin-left: 6% !important;
+  margin-top: -94% !important;
 }
 #slidess:hover {
   transform: translateY(340px);
@@ -589,9 +640,7 @@ body, html{
   height: 700px !important;  
   margin-top: 5% !important;
 }
-.sword_mobn{
-  margin-left: 5% !important;
-}
+
 .sword_cover{
   width: 280px !important;
   height: 500px !important;
