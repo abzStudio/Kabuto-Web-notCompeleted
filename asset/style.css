@@ -639,6 +639,11 @@ nav ul, .section_footer ul{
   padding-left: 0 !important;
   padding-right: 0 !important;
   }
+  .icons_ul{
+    text-align: left !important;
+    position: relative;
+    left: -30px;
+  }
 @media 
   (max-device-width: 1440px)
   and (max-device-height: 900px) { 
