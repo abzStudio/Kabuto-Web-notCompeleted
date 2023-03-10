@@ -47,7 +47,7 @@
     <div class="container-fluid reveal">
         <div class="row">
             <div class="col-md-12 hero_col">                
-                <button type="button" class="btn btn-infos btn_custom">Utility</button>
+                <!-- <button type="button" class="btn btn-infos btn_custom">Utility</button> -->
             </div>
         </div>
     </div>
@@ -111,14 +111,17 @@
             <div class="col-md-4 iamge_ad">
             </div>
             </div>
-            <div class="row reveal fade-top">
+            <div class="row revealsss fade-">
                 <div class="col-md-12 iamge_ad">
-                    <div class="wrapperss"> <img src="asset/images/sword.png" class="sword_back swordhide" alt="cloud">
-                      <img src="asset/images/swordmob.png" class="sword_back sword_mob" alt="cloud">
+                <div class="wrapperss"> 
+                 <!--      <img src="asset/images/sword.png" class="sword_back swordhide" alt="cloud"> -->
+                    <img src="asset/images/swordmob.png" class="sword_back swordhide" alt="cloud">
+                      <img src="asset/images/sword_mob1.png" class="sword_back sword_mobn" alt="cloud">
+
 
                         <div id="slidess">
-                          <img src="asset/images/swordcover.png" class="sword_cover swordhide" alt="cloud">
-                          <img src="asset/images/covermob.png" class="sword_cover sword_mob" alt="cloud">
+                         <img src="asset/images/covermob.png" class="sword_cover swordhide" alt="cloud"> 
+                          <img src="asset/images/covermob.png" class="sword_cover sword_mobn" alt="cloud">
                     </div>
                 </div>
                 </div>
@@ -130,7 +133,7 @@
         </section>
 
       <section class="section_story text-center sec_ani">
-          <div class="container-fluid">
+          <div class="container-fluid footer_head">
             <div class="row reveal">
               <div class="col-md-12 iamge_ad">
                   <img src="asset/images/cloudredbg.png" class="cloud_c" alt="cloud">
@@ -182,8 +185,8 @@
 }
 
 window.addEventListener("scroll", reveal);
-jQuery('aside ul li a').on('click', function(){
- //   jQuery("aside").hide();
+$('aside ul li a').on('click', function(){
+    $("aside").hide();
    // $("aside").removeClass("open");
 });
 $('.js-anchor-link').click(function(e){

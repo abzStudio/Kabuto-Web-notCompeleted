@@ -9,28 +9,37 @@ html {
 }
 /* animation left to right */
 #slidess {
-  position: relative;
-  left: 30vh;
-  top: -90vh;
   width: 1000px;
   height: 500px;
-  transition: 1s;
-  border: 3px soild red;
+  transition: 1s all;
+  position: relative;
+  margin-top: -88%;
+    margin-left: 24%;
+}
+.wrapperss{
+  position: relative;
+z-index: 99;
 }
 .sword_back{
-  height: 850px;
+  height: 2200px;
+  width: 1000px;
   object-fit: fill;
+  margin-top: -71%;
 }
 .sword_cover{
-  height: 550px;
+  height: 1350px;
+  width: 500px;
   object-fit: fill;
-  width: 1400px;
 }
-.wrapperss:hover #slidess {
-  transition: 2s;
-  left: 200vh; /* SET THE SLIDER TO BE 0 */
+.story_img{
+  position: relative;
+  z-index: 999;
 }
-@keyframes slideInUp {
+#slidess:hover {
+  transform: translateY(700px);
+ }
+
+/* @keyframes slideInUp {
   from {
     transform: translate3d(0, 100%, 0);
     visibility: visible;
@@ -39,11 +48,11 @@ html {
   to {
     transform: translate3d(0, 0, 0);
   }
-}
+} */
 
-.slideInUp {
+/* .slideInUp {
   animation-name: slideInUp;
-}
+} */
 /* animation left to right */
 /* Navbar start */
 .fade-lefts {
@@ -145,6 +154,8 @@ nav ul, .section_footer ul {
   padding: 0;
   list-style: none;
   font-family: Zaychik;
+  text-align: left;
+    padding: 0 15%;
 }
 .fend{
   display: flex;
@@ -332,6 +343,9 @@ transition: all 0.3s ease-in-out;
 }
 .teamhead h1{
 margin-top: 15%;
+position: relative;
+    left: -20vh;
+    text-align: left;
 }
 @keyframes fade-bottom {
   0% {
@@ -474,12 +488,19 @@ display: none;
 }
 }
 .sword_mob{
+  display: block;
+}
+.sword_mobn{
   display: none;
 }
 body, html{
   overflow-x: hidden;
 }
 @media screen and (max-width: 768px) {
+  .teamhead h1{
+    text-align: center;
+    left: 0;
+  }
   .btn_custom{
       width: 280px;
       font-size: 26px !important;
@@ -498,24 +519,26 @@ aside {
 body, html{
   overflow-x: hidden;
 }
-.sword_cover{
-  /* -ms-transform: rotate(90deg); /* IE 9 */
-  /* transform: rotate(90deg); */
+#slidess{
+  width: 100%;
+  height: 100%;
+  margin-left: 6%;
+  margin-top: -94%;
+}
+#slidess:hover {
+  transform: translateY(340px);
+ }
+.sword_mobn{
+  display: block;
 }
 .sword_back{
-  height: 800px;
-  width: 100%;
+  width: 350px;
+  height: 700px;
+  margin-top: -4%;
 }
 .sword_cover{
-  height: 700px;
-    width: 34%;
-}
-#slidess{
-  left: 5vh;
-  top: -64vh;
-}
-.sword_mob{
-  display: block;
+  width: 280px;
+  height: 500px;
 }
 .swordhide{
   display: none;
@@ -609,68 +632,61 @@ nav{
   text-align: center !important;
   right: 0 !important;
 }
+nav ul, .section_footer ul{
+  text-align: center;
+}
+.footer_head{
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  }
 @media 
-  (max-device-width: 414px)
-  and (max-device-height: 736px) { 
-    .sword_back{
-  height: 855px;
-    width: 385px  
-}
-.sword_cover {
-    height: 600px;
-    width: 345px;
-}
-#slidess {
-    left: 4vh;
-    top: -68vh;
-}
-}
-@media 
-  (max-device-width: 390px)
-  and (max-device-height: 844px) { 
-    .sword_back{
-  height: 855px;
-    width: 385px  
-}
-.sword_cover {
-    height: 570px;
-    width: 345px;
-}
-#slidess {
-    left: 4vh;
-    top: -58vh;
-}
+  (max-device-width: 1440px)
+  and (max-device-height: 900px) { 
+    #slidess{
+      margin-top: -81%;
+    margin-left: 26%;
+    }
 }
 @media 
-  (max-device-width: 375px)
-  and (max-device-height: 812px) { 
-    .sword_back{
-  height: 855px;
-    width: 385px  
+  (max-device-width: 1024px)
+  and (max-device-height: 1366px) { 
+ #slidess{
+  margin-top: -116%;
+    margin-left: 17%;
+ }
+ .teamhead h1{
+  left: 0;
+ }
 }
-.sword_cover {
-    height: 570px;
-    width: 345px;
+@media 
+  (max-device-width: 820px)
+  and (max-device-height: 1180px) { 
+
+.sword_back {
+    height: 1900px;
+    width: 1014px;
+    margin-left: -12% !important;
+    margin-top: -100% !important;
 }
-#slidess {
-  left: 4vh;
-    top: -62vh;
-}
+.sword_back, .sword_cover{
+  margin: 0 auto;
+      }
+      #slidess{
+        margin-top: -124%;
+        margin-left: 9%;
+      }
+      .teamhead h1{
+        left: 0;
+      }
 }
 
 @media 
-  (max-device-width: 375px)
-  and (max-device-height: 667px) { 
-    .sword_back{
-  height: 855px;
-    width: 385px  
-}
-.sword_cover {
-    height: 570px;
-    width: 345px;
-}
-#slidess {
-    left: 5vh;
-    top: -74vh;
-}
+  (max-device-width: 768px)
+  and (max-device-height: 1024px) { 
+    #slidess{  margin-left: -1%;
+    margin-top: -50%;
+    }
+    .sword_back, .sword_cover{
+margin: 0 auto;
+    }
 }
