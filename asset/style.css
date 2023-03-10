@@ -496,6 +496,59 @@ display: none;
 body, html{
   overflow-x: hidden;
 }
+@media 
+  (max-device-width: 1440px)
+  and (max-device-height: 900px) { 
+    #slidess{
+      margin-top: -81%;
+    margin-left: 26%;
+    }
+}
+@media 
+  (max-device-width: 1024px)
+  and (max-device-height: 1366px) { 
+ #slidess{
+  margin-top: -116%;
+    margin-left: 17%;
+ }
+ .teamhead h1{
+  left: 0;
+ }
+}
+@media 
+  (max-device-width: 820px)
+  and (max-device-height: 1180px) { 
+
+.sword_back {
+    height: 1900px;
+    width: 1014px;
+    margin-left: -12% !important;
+    margin-top: -100% !important;
+}
+.sword_back, .sword_cover{
+  margin: 0 auto;
+      }
+      #slidess{
+        margin-top: -124%;
+        margin-left: 9%;
+      }
+      .teamhead h1{
+        left: 0;
+      }
+}
+
+@media 
+  (max-device-width: 768px)
+  and (max-device-height: 1024px) 
+  { 
+    /* #slidess{  margin-left: -3% !important;
+    margin-top: -50% !important;
+    }
+    .sword_back, .sword_cover{
+margin: 0 auto;
+  
+} */
+  }
 @media screen and (max-width: 768px) {
   .teamhead h1{
     text-align: center;
@@ -532,13 +585,16 @@ body, html{
   display: block;
 }
 .sword_back{
-  width: 350px;
-  height: 700px;
-  margin-top: -4%;
+  width: 350px !important;
+  height: 700px !important;  
+  margin-top: 5% !important;
+}
+.sword_mobn{
+  margin-left: 5% !important;
 }
 .sword_cover{
-  width: 280px;
-  height: 500px;
+  width: 280px !important;
+  height: 500px !important;
 }
 .swordhide{
   display: none;
@@ -644,54 +700,3 @@ nav ul, .section_footer ul{
     position: relative;
     left: -30px;
   }
-@media 
-  (max-device-width: 1440px)
-  and (max-device-height: 900px) { 
-    #slidess{
-      margin-top: -81%;
-    margin-left: 26%;
-    }
-}
-@media 
-  (max-device-width: 1024px)
-  and (max-device-height: 1366px) { 
- #slidess{
-  margin-top: -116%;
-    margin-left: 17%;
- }
- .teamhead h1{
-  left: 0;
- }
-}
-@media 
-  (max-device-width: 820px)
-  and (max-device-height: 1180px) { 
-
-.sword_back {
-    height: 1900px;
-    width: 1014px;
-    margin-left: -12% !important;
-    margin-top: -100% !important;
-}
-.sword_back, .sword_cover{
-  margin: 0 auto;
-      }
-      #slidess{
-        margin-top: -124%;
-        margin-left: 9%;
-      }
-      .teamhead h1{
-        left: 0;
-      }
-}
-
-@media 
-  (max-device-width: 768px)
-  and (max-device-height: 1024px) { 
-    #slidess{  margin-left: -1%;
-    margin-top: -50%;
-    }
-    .sword_back, .sword_cover{
-margin: 0 auto;
-    }
-}
