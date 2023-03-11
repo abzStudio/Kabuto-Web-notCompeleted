@@ -272,7 +272,7 @@ nav{
   height: 100vh;
 background-repeat: no-repeat;
 background-size: cover;
-background-position: center;
+background-position: top;
 }
 div, h1 {
   font-family: Zaychik;
@@ -446,6 +446,11 @@ font-size: 60px !important;
   display: block;
   margin-right: 0;
 }
+.team_img{
+  width: 205px;
+  height: 225px;
+ 
+}
 
 @media screen and (min-width: 1025px) and (max-width:1550px) {
 .last_set {
@@ -504,67 +509,214 @@ body, html{
   and (max-device-height: 1440px) { 
   #slidess{
     margin-top: -46%;
-    margin-left: 36%;
+    margin-left: 25%;
+  }
+  .imga{
+    position: relative;
+    right: 28vh;
+    top: -57vh;
+  }
+  .imgb{
+    position: relative;
+    right: 43vh;
+    top: -41vh;
+  }
+  .imgc{
+    position: relative;
+    right: 58vh;
+    top: -25vh;
   }
 }
 @media 
   (max-device-width: 1920px)
   and (max-device-height: 1080px) { 
   #slidess{
-    margin-top: -62%;
-    margin-left: 32%;
+    margin-top: -61%;
+    margin-left: 17%;
+  }
+  .imga{
+    position: relative;
+    right: 37vh;
+    top: -58vh;
+  }
+  .imgb{
+    position: relative;
+    right: 56vh;
+    top: -36vh;
+  }
+  .imgc{
+    position: relative;
+    right: 75vh;
+    top: -14vh;
   }
 }
 @media 
 (max-device-width: 1600px)
 and (max-device-height: 900px) { 
 #slidess{
-  margin-top: -75%;
-  margin-left: 29%;
+  margin-top: -83%;
+  margin-left: 17%;
+}
+.imga{
+  position: relative;
+  right: 45vh;
+    top: -49vh;
+}
+.imgb{
+  position: relative;
+  right: 68vh;
+  top: -23vh;
+}
+.imgc{
+  position: relative;
+  right: 0vh;
+  top: -65vh;
 }
 }
 @media 
   (max-device-width: 1536px)
   and (max-device-height: 864px) { 
   #slidess{
-    margin-top: -78%;
-    margin-left: 28%;
+    margin-top: -88%;
+    margin-left: 15%;
+  }
+  .imga{
+    position: relative;
+    right: 47vh;
+    top: -51vh;
+  }
+  .imgb{
+    position: relative;
+    right: 71vh;
+    top: -24vh
+  }
+  .imgc{
+    position: relative;
+    right: 1vh;
+    top: -74vh;
   }
 }
 @media 
   (max-device-width: 1440px)
   and (max-device-height: 900px) { 
     #slidess{
-      margin-top: -81%;
-    margin-left: 26%;
+      margin-top: -96%;
+    margin-left: 14%;
+    }
+    .imga{
+      position: relative;
+      right: 45vh;
+      top: -50vh;
+    }
+    .imgb{
+      position: relative;
+      right: 68vh;
+      top: -23vh
+    }
+    .imgc{
+      position: relative;
+      right: 1vh;
+      top: -73vh;
     }
   }
   @media 
   (max-device-width: 1280px)
   and (max-device-height: 1024px) { 
     #slidess{
-      margin-top: -94%;
-      margin-left: 23%;
+      margin-top: -106%;
+      margin-left: 16%;
+    }
+    .imga{
+      position: relative;
+      right: 39vh;
+      top: -33vh;
+    }
+    .imgb{
+      position: relative;
+      right: -20vh;
+      top: -83vh
+    }
+    .imgc{
+      position: relative;
+      right: -0vh;
+      top: -58vh;
     }
   }
   @media 
   (max-device-width: 1280px)
   and (max-device-height: 800px) { 
     #slidess{
-      margin-top: -94%;
-      margin-left: 23%;
+      margin-top: -105%;
+      margin-left: 16%;
     }
+    .imga{
+      position: relative;
+      right: 51vh;
+      top: -42vh;
+    }
+    .imgb{
+      position: relative;
+      right: -24vh;
+      top: -105vh;
+    }
+    .imgc{
+      position: relative;
+      right: 2vh;
+      top: -73vh;
+    }
+  }
+  @media 
+  (max-device-width: 1366px)
+  and (max-device-height: 768px) { 
+    .imga{
+      position: relative;
+      right: 53vh;
+      top: -53vh;
+    }
+    .imgb{
+      position: relative;
+      right: -25vh;
+    top: -119vh;
+    }
+    .imgc{
+      position: relative;
+      right: 0vh;
+        top: -92vh;
+    }
+    #slidess {
+      margin-top: -99%;
+      margin-left: 19%;
+  }
+  .team_img {
+    width: 190px;
+    height: 200px;
+}
   }
 @media 
   (max-device-width: 1024px)
   and (max-device-height: 1366px) { 
  #slidess{
-  margin-top: -116%;
-    margin-left: 17%;
+  margin-top: -131%;
+    margin-left: 18%;
  }
  .teamhead h1{
   left: 0;
  }
+ .imga{
+  position: relative;
+  right: -30vh;
+  top: -81vh;
+}
+.imgb{
+  position: relative;
+  right: -15vh;
+  top: -63vh;
+}
+.imgc{
+  position: relative;
+  right: 0vh;
+    top: -45vh;
+}
 }
 @media 
   (max-device-width: 820px)
@@ -580,8 +732,23 @@ and (max-device-height: 900px) {
   margin: 0 auto;
       }
       #slidess{
-        margin-top: -124%;
+        margin-top: -146%;
         margin-left: 9%;
+      }
+      .imga{
+        position: relative;
+        right: -34vh;
+        top: -82vh;
+      }
+      .imgb{
+        position: relative;
+        right: -16vh;
+        top: -62vh;
+      }
+      .imgc{
+        position: relative;
+        right: 2vh;
+        top: -42vh;
       }
       .teamhead h1{
         left: 0;
@@ -592,19 +759,62 @@ and (max-device-height: 900px) {
   (max-device-width: 768px)
   and (max-device-height: 1024px) 
   { 
-    #slidess{  
-      margin-left: 3% !important;
-    margin-top: -50% !important;
-    }
     .sword_mobn {
       margin-left: 26% !important;
   }
+  #slidess:hover {
+    transform: translateY(590px) !important;
+   }
+  #slidess{
+    width: 100%;
+    height: 100%;
+    margin-left: -3% !important;
+      margin-top: -137% !important;
   }
-@media screen and (max-width: 768px) {
+  .sword_back {
+    width: 614px !important;
+    height: 1700px!important;
+    margin-top: -102% !important;
+  }
+  .imga{
+    position: relative;
+    right: 27vh;
+    top: -30vh;
+  }
+  .imgb{
+    position: relative;
+    right: -7vh;
+    top: -65vh;
+  }
+  .imgc{
+    position: relative;
+    right: 9vh;
+    top: -46vh;
+  }
+  .sword_cover{
+    width: 350px !important;
+    height: 990px;
+  }
+  .teamhead h1{
+    text-align: right !important;
+    position: relative;
+    left: 13vh !important;
+  }
+  .team_img {
+    width: 156px !important;
+    height: 173px !important;
+}
+  }
+@media screen and (max-width: 767px) {
   .teamhead h1{
     text-align: center;
     left: 0;
   }
+ 
+.team_img {
+  width: 130px !important;
+  height: 135px !important;
+}
   .btn_custom{
       width: 280px;
       font-size: 26px !important;
@@ -623,27 +833,34 @@ aside {
 body, html{
   overflow-x: hidden;
 }
-#slidess{
-  width: 100%;
-  height: 100%;
-  margin-left: 6% !important;
-  margin-top: -94% !important;
-}
+
 #slidess:hover {
-  transform: translateY(340px);
- }
+    transform: translateY(455px) !important;
+}
+.teamhead h1 {
+  position: relative;
+  left: -21vh !important;
+  top: -41px;
+}
+
 .sword_mobn{
   display: block;
 }
-.sword_back{
-  width: 350px !important;
-  height: 700px !important;  
-  margin-top: 5% !important;
+  .sword_mobn{
+    display: none !important; 
+  }
+  .swordhide {
+    display: block !important;
+    }
+    .sword_back {
+      width: 445px !important;
+      height: 1030px!important;
+      margin-top: -133% !important;
 }
 
 .sword_cover{
-  width: 280px !important;
-  height: 500px !important;
+    width: 292px !important;
+    height: 827px;
 }
 .swordhide{
   display: none;
@@ -748,4 +965,114 @@ nav ul, .section_footer ul{
     text-align: left !important;
     position: relative;
     left: -30px;
+  }
+  
+  @media 
+  (max-device-width: 414px)
+  and (max-device-height: 736px) 
+  { 
+    .imga{
+      position: relative;
+      right: -25vh;
+      top: -68vh;
+    }
+    .imgb{
+      position: relative;
+      right: -7vh;
+      top: -48vh;
+    }
+    .imgc{
+      position: relative;
+      right: 11vh;
+      top: -27vh;
+    }
+    #slidess {
+      width: 100%;
+      height: 100%;
+      margin-left: 9% !important;
+      margin-top: -159% !important;
+  }
+  .teamhead h1 {
+    position: relative;
+    left: -26vh !important;
+    top: -53px;
+}
+  }
+  @media 
+  (max-device-width: 390px)
+  and (max-device-height: 844px) 
+  { 
+    .imga{
+      position: relative;
+      right: -16vh;
+      top: -63vh;
+    }
+    .imgb{
+      position: relative;
+      right: 0vh;
+      top: -44vh;
+    }
+    .imgc{
+      position: relative;
+      right: -9vh;
+    top: -42vh;
+    }
+    #slidess {
+      width: 100%;
+      height: 100%;
+      margin-left: 16% !important;
+      margin-top: -212% !important;
+  }
+  }
+  @media 
+  (max-device-width: 375px)
+  and (max-device-height: 812px) 
+  { 
+    .imga{
+      position: relative;
+      right: -18vh;
+      top: -63vh;
+    }
+    .imgb{
+      position: relative;
+      right: -1vh;
+      top: -44vh;
+    }
+    .imgc{
+      position: relative;
+      right: -10vh;
+    top: -42vh;
+    }
+    #slidess {
+      width: 100%;
+      height: 100%;
+      margin-left: 16% !important;
+      margin-top: -212% !important;
+  }
+  }
+  @media 
+  (max-device-width: 375px)
+  and (max-device-height: 667px) 
+  { 
+    .imga{
+      position: relative;
+      right: -22vh;
+      top: -75vh;
+    }
+    .imgb{
+      position: relative;
+      right: -2vh;
+      top: -52vh;
+    }
+    .imgc{
+      position: relative;
+      right: -13vh;
+      top: -50vh;
+    }
+    #slidess {
+      width: 100%;
+      height: 100%;
+      margin-left: 16% !important;
+      margin-top: -212% !important;
+  }
   }
