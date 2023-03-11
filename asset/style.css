@@ -10,52 +10,113 @@ html {
 body{
   background-color: #f3d9b5 !important;
 }
+a{
+ color: #f3d9b5 !important;
+}
 /* animation left to right */
-#slidess {
-  width: 1000px;
-  height: 500px;
-  transition: 1s all;
-  position: relative;
-  margin-top: -88%;
-    margin-left: 24%;
-}
-.wrapperss{
-  position: relative;
-z-index: 99;
-}
-.sword_back{
-  height: 2200px;
-  width: 1000px;
-  object-fit: fill;
-  margin-top: -71%;
-}
-.sword_cover{
-  height: 1350px;
-  width: 500px;
-  object-fit: fill;
-}
 .story_img{
   position: relative;
   z-index: 999;
 }
-#slidess:hover {
-  transform: translateY(700px);
- }
 
-/* @keyframes slideInUp {
-  from {
-    transform: translate3d(0, 100%, 0);
-    visibility: visible;
-  }
 
-  to {
-    transform: translate3d(0, 0, 0);
-  }
-} */
-
-/* .slideInUp {
-  animation-name: slideInUp;
-} */
+.contan_images {
+  position: relative;
+  width: 1160px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  transform-style: preserve-3d;
+  perspective: 500px;
+  margin: auto;
+}
+.contan_images .box {
+  position: relative;
+  width: 275px;
+  height: 275px;
+  background: #000;
+  transition: 0.5s;
+  transform-style: preserve-3d;
+  overflow: hidden;
+  margin-right: 15px;
+  margin-top: 45px;
+}
+.contan_images:hover .box {
+  transform: rotateY(25deg);
+}
+.contan_images .box:hover ~ .box {
+  transform: rotateY(-25deg);
+}
+.contan_images .box:hover {
+  transform: rotateY(0deg) scale(1.25);
+  z-index: 1;
+  box-shadow: 0 25px 40px rgba(0,0,0,0.5);
+}
+.contan_images .box .imgBx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.contan_images .box .imgBx:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg,#f00,#000);
+  z-index: 1;
+  opacity: 0;
+  transition: 0.5s;
+  mix-blend-mode: multiply;
+}
+.contan_images .box:hover .imgBx:before {
+  opacity: 1;
+}
+.contan_images .box .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.contan_images .box .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  padding: 20px;
+  align-items: flex-end;
+  box-sizing: border-box;
+}
+.contan_images .box .content h2 {
+  color: #fff;
+  transition: 0.5s;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-size: 20px;
+  transform: translateY(200px);
+  transition-delay: 0.3s;
+}
+.contan_images .box:hover .content h2 {
+  transform: translateY(0px);
+}
+.contan_images .box .content p {
+  color: #fff;
+  transition: 0.5s;
+  font-size: 14px;
+  transform: translateY(200px);
+  transition-delay: 0.4s;
+}
+.contan_images .box:hover .content p {
+  transform: translateY(0px);
+}
 /* animation left to right */
 /* Navbar start */
 .fade-lefts {
@@ -89,9 +150,6 @@ z-index: 99;
   0% {opacity:0;}
   100% {opacity:1;}
 }
-
-
-
 .menu-btn{
   background-image: url("images/menuicon.png") !important; 
 }
@@ -207,7 +265,8 @@ nav ul li a:before {
 
 @media screen and (min-width: 600px) {
   nav ul li a, .js-anchor-link {
-    font-size: 3em;
+    line-height: 141px;
+    font-size: 128px;
  }
 
 .close {
@@ -216,6 +275,9 @@ nav ul li a:before {
   right: -90px;
   z-index: 3;
   cursor: pointer;
+}
+.open{
+  display: block !important;
 }
 .close span, .close span:before, .close span:after {
   border-radius: 4px;
@@ -344,12 +406,7 @@ transition: all 0.3s ease-in-out;
   align-items: end;
   justify-content: center;
 }
-.teamhead h1{
-margin-top: 15%;
-position: relative;
-    left: -20vh;
-    text-align: left;
-}
+
 @keyframes fade-bottom {
   0% {
     transform: translateY(50px);
@@ -385,7 +442,6 @@ position: relative;
   position: relative;
   bottom: 8vh !important; 
 }
-
 .btn_custom{
   background: url(images/button.png);
 width: 350px;
@@ -446,11 +502,6 @@ font-size: 60px !important;
   display: block;
   margin-right: 0;
 }
-.team_img{
-  width: 205px;
-  height: 225px;
- 
-}
 
 @media screen and (min-width: 1025px) and (max-width:1550px) {
 .last_set {
@@ -495,325 +546,73 @@ br{
 display: none;
 }
 }
-.sword_mob{
-  display: block;
-}
-.sword_mobn{
-  display: none;
-}
 body, html{
   overflow-x: hidden;
 }
 @media 
   (max-device-width: 2560px)
   and (max-device-height: 1440px) { 
-  #slidess{
-    margin-top: -46%;
-    margin-left: 25%;
-  }
-  .imga{
-    position: relative;
-    right: 28vh;
-    top: -57vh;
-  }
-  .imgb{
-    position: relative;
-    right: 43vh;
-    top: -41vh;
-  }
-  .imgc{
-    position: relative;
-    right: 58vh;
-    top: -25vh;
-  }
 }
 @media 
   (max-device-width: 1920px)
   and (max-device-height: 1080px) { 
-  #slidess{
-    margin-top: -61%;
-    margin-left: 17%;
-  }
-  .imga{
-    position: relative;
-    right: 37vh;
-    top: -58vh;
-  }
-  .imgb{
-    position: relative;
-    right: 56vh;
-    top: -36vh;
-  }
-  .imgc{
-    position: relative;
-    right: 75vh;
-    top: -14vh;
-  }
+  
 }
 @media 
 (max-device-width: 1600px)
 and (max-device-height: 900px) { 
-#slidess{
-  margin-top: -83%;
-  margin-left: 17%;
-}
-.imga{
-  position: relative;
-  right: 45vh;
-    top: -49vh;
-}
-.imgb{
-  position: relative;
-  right: 68vh;
-  top: -23vh;
-}
-.imgc{
-  position: relative;
-  right: 0vh;
-  top: -65vh;
-}
+
 }
 @media 
   (max-device-width: 1536px)
   and (max-device-height: 864px) { 
-  #slidess{
-    margin-top: -88%;
-    margin-left: 15%;
-  }
-  .imga{
-    position: relative;
-    right: 47vh;
-    top: -51vh;
-  }
-  .imgb{
-    position: relative;
-    right: 71vh;
-    top: -24vh
-  }
-  .imgc{
-    position: relative;
-    right: 1vh;
-    top: -74vh;
-  }
+
 }
 @media 
   (max-device-width: 1440px)
   and (max-device-height: 900px) { 
-    #slidess{
-      margin-top: -96%;
-    margin-left: 14%;
-    }
-    .imga{
-      position: relative;
-      right: 45vh;
-      top: -50vh;
-    }
-    .imgb{
-      position: relative;
-      right: 68vh;
-      top: -23vh
-    }
-    .imgc{
-      position: relative;
-      right: 1vh;
-      top: -73vh;
-    }
+
   }
   @media 
   (max-device-width: 1280px)
   and (max-device-height: 1024px) { 
-    #slidess{
-      margin-top: -106%;
-      margin-left: 16%;
-    }
-    .imga{
-      position: relative;
-      right: 39vh;
-      top: -33vh;
-    }
-    .imgb{
-      position: relative;
-      right: -20vh;
-      top: -83vh
-    }
-    .imgc{
-      position: relative;
-      right: -0vh;
-      top: -58vh;
-    }
   }
   @media 
   (max-device-width: 1280px)
   and (max-device-height: 800px) { 
-    #slidess{
-      margin-top: -105%;
-      margin-left: 16%;
-    }
-    .imga{
-      position: relative;
-      right: 51vh;
-      top: -42vh;
-    }
-    .imgb{
-      position: relative;
-      right: -24vh;
-      top: -105vh;
-    }
-    .imgc{
-      position: relative;
-      right: 2vh;
-      top: -73vh;
-    }
+  
   }
   @media 
   (max-device-width: 1366px)
   and (max-device-height: 768px) { 
-    .imga{
-      position: relative;
-      right: 53vh;
-      top: -53vh;
-    }
-    .imgb{
-      position: relative;
-      right: -25vh;
-    top: -119vh;
-    }
-    .imgc{
-      position: relative;
-      right: 0vh;
-        top: -92vh;
-    }
-    #slidess {
-      margin-top: -99%;
-      margin-left: 19%;
-  }
-  .team_img {
-    width: 190px;
-    height: 200px;
-}
+  
   }
 @media 
   (max-device-width: 1024px)
   and (max-device-height: 1366px) { 
- #slidess{
-  margin-top: -131%;
-    margin-left: 18%;
- }
- .teamhead h1{
-  left: 0;
- }
- .imga{
-  position: relative;
-  right: -30vh;
-  top: -81vh;
-}
-.imgb{
-  position: relative;
-  right: -15vh;
-  top: -63vh;
-}
-.imgc{
-  position: relative;
-  right: 0vh;
-    top: -45vh;
-}
+ 
 }
 @media 
   (max-device-width: 820px)
   and (max-device-height: 1180px) { 
 
-.sword_back {
-    height: 1900px;
-    width: 1014px;
-    margin-left: -12% !important;
-    margin-top: -100% !important;
-}
-.sword_back, .sword_cover{
-  margin: 0 auto;
-      }
-      #slidess{
-        margin-top: -146%;
-        margin-left: 9%;
-      }
-      .imga{
-        position: relative;
-        right: -34vh;
-        top: -82vh;
-      }
-      .imgb{
-        position: relative;
-        right: -16vh;
-        top: -62vh;
-      }
-      .imgc{
-        position: relative;
-        right: 2vh;
-        top: -42vh;
-      }
-      .teamhead h1{
-        left: 0;
-      }
+
 }
 
 @media 
   (max-device-width: 768px)
   and (max-device-height: 1024px) 
   { 
-    .sword_mobn {
-      margin-left: 26% !important;
+
   }
-  #slidess:hover {
-    transform: translateY(590px) !important;
-   }
-  #slidess{
-    width: 100%;
-    height: 100%;
-    margin-left: -3% !important;
-      margin-top: -137% !important;
-  }
-  .sword_back {
-    width: 614px !important;
-    height: 1700px!important;
-    margin-top: -102% !important;
-  }
-  .imga{
-    position: relative;
-    right: 27vh;
-    top: -30vh;
-  }
-  .imgb{
-    position: relative;
-    right: -7vh;
-    top: -65vh;
-  }
-  .imgc{
-    position: relative;
-    right: 9vh;
-    top: -46vh;
-  }
-  .sword_cover{
-    width: 350px !important;
-    height: 990px;
-  }
-  .teamhead h1{
-    text-align: right !important;
-    position: relative;
-    left: 13vh !important;
-  }
-  .team_img {
-    width: 156px !important;
-    height: 173px !important;
-}
-  }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .teamhead h1{
     text-align: center;
     left: 0;
   }
- 
-.team_img {
-  width: 130px !important;
-  height: 135px !important;
+  .footer_head ul li a {
+    font-size: 43px;
+    line-height: 54px;
 }
   .btn_custom{
       width: 280px;
@@ -834,41 +633,6 @@ body, html{
   overflow-x: hidden;
 }
 
-#slidess:hover {
-    transform: translateY(455px) !important;
-}
-.teamhead h1 {
-  position: relative;
-  left: -21vh !important;
-  top: -41px;
-}
-
-.sword_mobn{
-  display: block;
-}
-  .sword_mobn{
-    display: none !important; 
-  }
-  .swordhide {
-    display: block !important;
-    }
-    .sword_back {
-      width: 445px !important;
-      height: 1030px!important;
-      margin-top: -133% !important;
-}
-
-.sword_cover{
-    width: 292px !important;
-    height: 827px;
-}
-.swordhide{
-  display: none;
-}
-
-.teamhead h1{
-  margin-top: 5%;
-  }
 .div_texts{
   margin-top: 20px;
 }
@@ -917,12 +681,17 @@ nav{
   top: 8vh;
   right: 0 !important;
 }
-.iconmob{
+.social_icons{
   top: 0 !important;
+  right: 0 !important;
 }
 /* body, html{
   overflow: hidden;
 } */
+
+.icons_ul{
+  left: 0 !important;
+  }
 .fend{
   display: block !important;
   align-items: center !important;
@@ -933,6 +702,10 @@ nav{
   height: 23px !important;
   margin-top: 20px !important;
 }
+}
+.footer_head ul li a{
+  font-size: 60px;
+  line-height: 70px;
 }
 .iconset{
   width: 30px;
@@ -947,13 +720,13 @@ nav{
 .social_icons{
   position: relative;
   text-align: right;
-  right: 35vh;
+ 
 }
 .iconmob{
-  top: 0 !important;
-  text-align: center !important;
-  right: 0 !important;
+  top: 0;
+  right: 40px;
 }
+
 nav ul, .section_footer ul{
   text-align: center;
 }
@@ -966,113 +739,7 @@ nav ul, .section_footer ul{
     position: relative;
     left: -30px;
   }
-  
-  @media 
-  (max-device-width: 414px)
-  and (max-device-height: 736px) 
-  { 
-    .imga{
-      position: relative;
-      right: -25vh;
-      top: -68vh;
-    }
-    .imgb{
-      position: relative;
-      right: -7vh;
-      top: -48vh;
-    }
-    .imgc{
-      position: relative;
-      right: 11vh;
-      top: -27vh;
-    }
-    #slidess {
-      width: 100%;
-      height: 100%;
-      margin-left: 9% !important;
-      margin-top: -159% !important;
-  }
-  .teamhead h1 {
-    position: relative;
-    left: -26vh !important;
-    top: -53px;
-}
-  }
-  @media 
-  (max-device-width: 390px)
-  and (max-device-height: 844px) 
-  { 
-    .imga{
-      position: relative;
-      right: -16vh;
-      top: -63vh;
-    }
-    .imgb{
-      position: relative;
-      right: 0vh;
-      top: -44vh;
-    }
-    .imgc{
-      position: relative;
-      right: -9vh;
-    top: -42vh;
-    }
-    #slidess {
-      width: 100%;
-      height: 100%;
-      margin-left: 16% !important;
-      margin-top: -212% !important;
-  }
-  }
-  @media 
-  (max-device-width: 375px)
-  and (max-device-height: 812px) 
-  { 
-    .imga{
-      position: relative;
-      right: -18vh;
-      top: -63vh;
-    }
-    .imgb{
-      position: relative;
-      right: -1vh;
-      top: -44vh;
-    }
-    .imgc{
-      position: relative;
-      right: -10vh;
-    top: -42vh;
-    }
-    #slidess {
-      width: 100%;
-      height: 100%;
-      margin-left: 16% !important;
-      margin-top: -212% !important;
-  }
-  }
-  @media 
-  (max-device-width: 375px)
-  and (max-device-height: 667px) 
-  { 
-    .imga{
-      position: relative;
-      right: -22vh;
-      top: -75vh;
-    }
-    .imgb{
-      position: relative;
-      right: -2vh;
-      top: -52vh;
-    }
-    .imgc{
-      position: relative;
-      right: -13vh;
-      top: -50vh;
-    }
-    #slidess {
-      width: 100%;
-      height: 100%;
-      margin-left: 16% !important;
-      margin-top: -212% !important;
-  }
+  .rowicon{
+    padding-top: 5%;
+    padding-bottom: 3%;
   }
