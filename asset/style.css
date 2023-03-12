@@ -195,6 +195,11 @@ margin-bottom: 0;
 .menu-btn:hover, .close span:hover, .js-anchor-link:hover{
   cursor: url(images/sword-pointer.png),auto;
 }
+.menu-btn:hover, .close span:hover{
+  -ms-transform: scale(1.3); /* IE 9 */
+  -webkit-transform: scale(1.3); /* Safari 3-8 */
+  transform: scale(1.3);
+}
 .section_footer{
   background-image: url("images/footerbg.png"); 
   background-repeat: no-repeat;
@@ -757,6 +762,9 @@ nav{
 }
 .iconset:hover{
   color: #f3d9b5;
+  -ms-transform: scale(1.3); /* IE 9 */
+  -webkit-transform: scale(1.3); /* Safari 3-8 */
+  transform: scale(1.3);
 }
 .icons_ul{
   display: inline-flex;
