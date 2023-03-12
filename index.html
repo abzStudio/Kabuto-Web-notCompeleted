@@ -210,8 +210,14 @@
 
 
 <script>
-  $(window).load(function(){
-     $('.loader').fadeOut(3000);
+ jQuery($ => {
+  $(window).on('load', () => {
+    setTimeout(() => {
+      $('.loader').fadeOut('fast', function() {
+        $(this).remove();
+      });
+    }, 3000);
+  });
 });
     function reveal() {
   var reveals = document.querySelectorAll(".reveal");
