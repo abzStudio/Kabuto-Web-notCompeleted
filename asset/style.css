@@ -21,13 +21,20 @@ a{
 
 /* PRELOADER CSS */
 .loader {
+  background-color: #f3d9b5 !important;
 	position: fixed;
 	left: 0px;
 	top: 0px;
 	width: 100%;
 	height: 100%;
-	z-index: 9999;
-	background: url('http://www.downgraf.com/wp-content/uploads/2014/09/01-progress.gif?e44397') 50% 50% no-repeat rgb(249,249,249);
+  display: flex;
+    align-items: center;
+    justify-content: center;
+  /*	z-index: 9999;
+	background: url('http://www.downgraf.com/wp-content/uploads/2014/09/01-progress.gif?e44397') 50% 50% no-repeat rgb(249,249,249); */
+}
+.loader h1{
+  font-size: 128px;
 }
 /* animation left to right */
 .story_img{
@@ -44,15 +51,25 @@ a{
   perspective: 500px;
   margin: auto;
 }
+
+.contentset:hover{
+  border: 2px solid black;
+  /* background: #BA2F2F; 
+  width: 301px;
+  height: 59px; */
+}
+.contentset a, .contentset p{
+  position: relative;
+  left: 10px;
+}
 .contan_images .box {
   position: relative;
-  width: 275px;
-  height: 275px;
-  background: #000;
+  width: 301px;
+  height: 287px;
   transition: 0.5s;
   transform-style: preserve-3d;
   overflow: hidden;
-  margin-right: 15px;
+  margin-right: 25px;
   margin-top: 45px;
 }
 .contan_images:hover .box {
@@ -105,7 +122,7 @@ a{
   height: 100%;
   z-index: 1;
   display: flex;
-  padding: 20px;
+  padding: 20px 0 0 0;
   align-items: flex-end;
   box-sizing: border-box;
 }
@@ -117,6 +134,10 @@ a{
   font-size: 20px;
   transform: translateY(200px);
   transition-delay: 0.3s;
+  text-align: left;
+  font-size: 24px;
+line-height: 26px;
+letter-spacing: 0.165em;
 }
 .contan_images .box:hover .content h2 {
   transform: translateY(0px);
@@ -124,9 +145,13 @@ a{
 .contan_images .box .content p {
   color: #fff;
   transition: 0.5s;
-  font-size: 14px;
+  font-size: 15px;
+  line-height: 17px;
+  letter-spacing: 0.165em;
+  text-align: left;
   transform: translateY(200px);
   transition-delay: 0.4s;
+margin-bottom: 0;
 }
 .contan_images .box:hover .content p {
   transform: translateY(0px);
@@ -166,6 +191,9 @@ a{
 }
 .menu-btn{
   background-image: url("images/menuicon.png") !important; 
+}
+.menu-btn:hover, .close span:hover, .js-anchor-link:hover{
+  cursor: url(images/sword-pointer.png),auto;
 }
 .section_footer{
   background-image: url("images/footerbg.png"); 
@@ -727,6 +755,9 @@ nav{
   margin: 0 5px;
   object-fit: contain;
 }
+.iconset:hover{
+  color: #f3d9b5;
+}
 .icons_ul{
   display: inline-flex;
   list-style: none;
@@ -740,10 +771,6 @@ nav{
   top: 0;
   right: 40px;
 }
-
-nav ul, .section_footer ul{
-  text-align: center;
-}
 .footer_head{
   padding-left: 0 !important;
   padding-right: 0 !important;
@@ -754,6 +781,9 @@ nav ul, .section_footer ul{
     left: -30px;
   }
   .rowicon{
-    padding-top: 5%;
+    padding-top: 3%;
     padding-bottom: 3%;
+  }
+  .section_footer ul {
+    margin-top: 3%;
   }
