@@ -39,10 +39,10 @@
             </ul>
         </div>
         <ul class="pointshead">
-            <li><a class="js-anchor-link" href="#story_section">- Story</a></li>
-            <li><a class="js-anchor-link" href="#team_section">- Team</a></li>
-            <li><a class="js-anchor-link" href="#">- Mint</a></li>
-            <li><a class="js-anchor-link" href="#footer_section">- Useful Links</a></li>
+            <li><a class="js-anchor-link down" href="#story_section">- Story</a></li>
+            <li><a class="js-anchor-link down" href="#team_section">- Team</a></li>
+            <li><a class="js-anchor-link down" href="#">- Mint</a></li>
+            <li><a class="js-anchor-link down" href="#footer_section">- Useful Links</a></li>
       </ul>
     </nav>
   </aside>
@@ -244,14 +244,29 @@ $('aside ul li a').on('click', function(){
      $("aside").addClass("open");
 
 });
-$('.js-anchor-link').click(function(e){
-  e.preventDefault();
+// $('.js-anchor-link').click(function(e){
+//   e.preventDefault();
+  
+//   var target = $($(this).attr('href'));
+//   if(target.length){
+//     var scrollTo = target.offset().top;
+//     $('body, html').animate({scrollTop: scrollTo+'px'}, 1000);
+//   }
+// });
+$('.js-anchor-link').click(function(){
   var target = $($(this).attr('href'));
-  if(target.length){
-    var scrollTo = target.offset().top;
-    $('body, html').animate({scrollTop: scrollTo+'px'}, 2000);
+ if(target.length){
+  var scrollTo = target.offset().top;
+    $("html, body").animate({ scrollTop: scrollTo+'px' }, 2000);
+    return false;
   }
+  
 });
+// $(function () {$('.js-anchor-link').click(function () {
+// $('body,html').animate({
+//     scrollTop: 0
+// }, 1000);
+// return false;});});
 window.addEventListener("scroll", reveal);
 $(function() {
     $('.toggle-overlay').click(function() {
