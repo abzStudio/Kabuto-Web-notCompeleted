@@ -3,9 +3,7 @@
   src: url(fonts/Zaychik.woff2);
   font-weight: bold;
 }
-br{
-  display: none;
-}
+
 html {
   scroll-behavior: smooth;
 }
